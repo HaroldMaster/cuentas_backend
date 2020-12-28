@@ -131,7 +131,7 @@ as
 				SET 
 				ca_saldo = ca_saldo + @i_valor
 				WHERE
-				ca_banco = @i_cuentaOrigen
+				ca_banco = @i_cuentaDe
 			END
 			
 			IF @i_tipoCuentaDe = 'C'
@@ -140,7 +140,7 @@ as
 				SET 
 				cc_saldo = cc_saldo + @i_valor
 				WHERE
-				cc_banco = @i_cuentaOrigen
+				cc_banco = @i_cuentaDe
 			END	    	
     	END
     	
@@ -158,7 +158,7 @@ as
 				SET 
 				ca_saldo = ca_saldo + @i_valor
 				WHERE
-				ca_banco = @i_cuentaOrigen
+				ca_banco = @i_cuentaDe
 			END
 			
 			IF @i_tipoCuentaDe = 'C'
@@ -167,7 +167,7 @@ as
 				SET 
 				cc_saldo = cc_saldo + @i_valor
 				WHERE
-				cc_banco = @i_cuentaOrigen
+				cc_banco = @i_cuentaDe
 			END	    	
     	END
     	-- Transaccion
