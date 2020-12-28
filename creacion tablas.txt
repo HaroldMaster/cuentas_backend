@@ -1,0 +1,42 @@
+IF OBJECT_ID ('dbo.g5_cuenta_ahorros') IS NOT NULL
+	DROP TABLE dbo.g5_cuenta_ahorros
+GO
+
+CREATE TABLE dbo.g5_cuenta_ahorros
+	(
+	ca_banco              VARCHAR (10) NOT NULL,
+	ca_fecha_creacion     DATETIME NOT NULL,
+	ca_fecha_modificacion DATETIME NOT NULL,
+	ca_cliente            INT NOT NULL,
+	ca_saldo              FLOAT NOT NULL
+	)
+GO
+
+IF OBJECT_ID ('dbo.g5_cuenta_corriente') IS NOT NULL
+	DROP TABLE dbo.g5_cuenta_corriente
+GO
+
+CREATE TABLE dbo.g5_cuenta_corriente
+	(
+	cc_banco              VARCHAR (10) NOT NULL,
+	cc_fecha_creacion     DATETIME NOT NULL,
+	cc_fecha_modificacion DATETIME NOT NULL,
+	cc_cliente            INT NOT NULL,
+	cc_saldo              FLOAT NOT NULL
+	)
+GO
+
+/*Transaccion */
+IF OBJECT_ID ('dbo.g5_transaccion') IS NOT NULL
+	DROP TABLE dbo.g5_transaccion
+GO
+
+CREATE TABLE dbo.g5_transaccion
+	(
+	tr_id          INT NOT NULL,
+	tr_fecha       DATETIME NOT NULL,
+	tr_cuenta      VARCHAR (10) NOT NULL,
+	tr_tipo_tr     CHAR (1) NOT NULL,
+	tr_tipo_cuenta CHAR (1) NOT NULL
+	)
+GO
